@@ -9,6 +9,11 @@ Starting with a brand new macOS:
 Bootstrap: 
 
 ```sh
+# run installer
+curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/master/install | sh
+```
+or here:
+```sh
 sh bootstrap.sh
 ```
 
@@ -18,35 +23,28 @@ Homebrew
 sh brew.sh > brew.log
 ```
 
+```sh
+# compare with it's original and review the settings
+sh macos.sh
+```
+
+## Manual settings
+
+* open Jumcut.app and ShiftIt.app and allow access
+1. Disable TouchBar as default
+2. Remove Siri from TouchBar (replace with lock computer)
+3. Map fn to show F keys
+4. Finder:
+4. Re-map Capslock
+6. Open Safari and login to GitHub
+
 # Login to iCloud, Accounts and 1Passwrod
 
-```sh
-# run script
-curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/master/install | bash
-
-# XCode accept license and install cld tools (sudo xcodebuild -license accept && sudo xcodebuild -runFirstLaunch)
-sudo xcodebuild -runFirstLaunch
-
-# apply the lates macOS update!
-sudo softwareupdate -iva
-```
-
-Install Homebrew:
-
-```
-# install homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# install all tools, software, fonts and mac app store apps
-sh brew.sh
-
-sh cask.sh
-```
 
 ## Install dotfiles
 
 ```sh
-...
+sh dotfiles.sh
 ```
 
 ## Import previous configs etc
@@ -55,10 +53,21 @@ sh cask.sh
 2. fish history
 3. rupa z history
 4. TimeMachine Exclude list
+5. Re-config the Capslocks key to ESC
 
 
 ### less important imports
 1. Import lolcommits history
+2. ```
+# install OctoTree for Safari
+mkdir -p ~/code/clones
+git clone https://github.com/ovity/octotree ~/code/clones/octotree
+cd ~/code/clones/octotree
+npm i && npm run build
+# on error: probably run:
+npm install natives@1.1.6
+# Add the tmp/safari build to the Safari Extension Builder
+```
 
 
 ## Set Ups and Checks

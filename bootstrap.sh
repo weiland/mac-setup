@@ -6,6 +6,11 @@ sudo -v
 # use this to keep sudo alive
 # #while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# hello weclome new machine!
+if [ ! -d "$HOME/code" ]; then
+  mkdir "$HOME/code"
+fi
+
 HOMEBREW_PREFIX="/usr/local"
 
 # Adjust rights
