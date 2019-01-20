@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
 
 # ask for sudo
-echo "Hello sudo!"
+echo "This will bootstrap a new machine. You can ctrl-c to stop this. otherwise press any key and enter the sudo password."
+read -n 1
 sudo -v
 # use this to keep sudo alive
-# #while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# XCode accept license and install cld tools (sudo xcodebuild -license accept && sudo xcodebuild -runFirstLaunch)
+sudo xcodebuild -runFirstLaunch
+
+# apply the lates macOS update!
+sudo softwareupdate -ia --verbose
 
 # hello weclome new machine!
 if [ ! -d "$HOME/code" ]; then
@@ -28,9 +35,9 @@ fi
 
 # install homebrew if not yet existing
 if ! command -v brew >/dev/null; then
-	echo "Homebrew is not yet installed"
-	# install homebrew
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Homebrew is not yet installed"
+  # install homebrew
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
     echo "Homebrew is already installed."
 fi
