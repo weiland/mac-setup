@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+# here we assume that brew is installed (also bash and fish)
+
 brew update
 brew upgrade
 
@@ -10,37 +13,6 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 BREW_PREFIX=$(brew --prefix)
-
-# GNU
-brew install coreutils
-if [ ! -f "${BREW_PREFIX}/bin/sha256sum" ]; then
-	ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
-fi
-
-brew install moreutils
-brew install findutils
-brew install gnu-sed --with-default-names
-
-# Bash 4
-brew install bash
-brew install bash-completion2
-
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-fi;
-
-# Install fish shell
-brew install fish
-sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
-
-# Set fish as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/fish" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/fish" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/fish";
-fi;
-
-# Mac App Store cli
-brew install mas
 
 # Update macOS GNU utils
 brew install grep
@@ -158,13 +130,12 @@ brew install zopfli
 
 # TU Darmstadt
 # use Java 8
-brew tap caskroom/versions
-brew cask install java8
+#brew cask install java8
 #brew cask install java
 #brew 'maven'
 #brew 'scala'
 #brew 'sbt'
-brew cask install java
+#brew cask install java
 
 # Casks
 brew cask install jumpcut
