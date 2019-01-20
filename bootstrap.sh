@@ -14,9 +14,16 @@ sudo xcodebuild -runFirstLaunch
 sudo softwareupdate -ia --verbose
 
 # hello weclome new machine!
-if [ ! -d "$HOME/code" ]; then
+if [ -d "$HOME/code" ]; then
+  echo "There is already a ~/code directory"
+  read -n 1
+else
   mkdir "$HOME/code"
 fi
+
+# clone the mac-setup directory
+git clone https://github.com/weiland/mac-setup ~/code/mac-setup
+cd ~/code/mac-setup
 
 HOMEBREW_PREFIX="/usr/local"
 

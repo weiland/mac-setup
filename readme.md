@@ -6,29 +6,44 @@
 
 Starting with a brand new macOS:
 
-Bootstrap: 
+1. Make sure to be connected to a wifi network
+2. Login to iCloud
+
+
+### Bootstrap a new machine
+
+This will do the very first steps for a new machine. The sudo password will be required.
+The command line tools, homebrew and fish shell will be installed.
 
 ```sh
 # run installer
 curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/master/install | sh
 ```
-or here:
+
+## Install dotfiles
+
 ```sh
-sh bootstrap.sh
+sh dotfiles.sh
 ```
 
-Homebrew
+
+### Homebrew
 
 ```sh
 sh brew.sh > brew.log
 ```
 
+### MacOS defauls
+
+Compare with it's original and review the settings in there.
+
 ```sh
-# compare with it's original and review the settings
 sh macos.sh
 ```
 
 ## Manual settings
+
+Since `macos.sh` cannot catch everything...
 
 * open Jumcut.app and ShiftIt.app and allow access
 1. Disable TouchBar as default
@@ -38,14 +53,7 @@ sh macos.sh
 4. Re-map Capslock
 6. Open Safari and login to GitHub
 
-# Login to iCloud, Accounts and 1Passwrod
 
-
-## Install dotfiles
-
-```sh
-sh dotfiles.sh
-```
 
 ## Import previous configs etc
 
