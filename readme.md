@@ -51,10 +51,18 @@ Since `macos.sh` cannot catch everything...
 1. Disable TouchBar as default
 2. Remove Siri from TouchBar (replace with lock computer)
 3. Map fn to show F keys
-4. Finder:
 4. Re-map Capslock
-6. Open Safari and login to GitHub
 
+## Finder
+
+* show paths
+* remove labels
+* add home
+* add sidebar items
+
+## Safari
+
+* Open Safari and login to GitHub
 
 
 ## Import previous configs etc
