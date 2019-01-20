@@ -9,7 +9,20 @@ Starting with a brand new macOS:
 Bootstrap: 
 
 ```sh
-# XCode accept license and install cld tools (sudo xcodebuild -license && sudo xcodebuild -runFirstLaunch)
+sh bootstrap.sh
+```
+
+Homebrew
+
+```sh
+sh brew.sh > brew.log
+```
+
+```sh
+# run script
+curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/master/install | bash
+
+# XCode accept license and install cld tools (sudo xcodebuild -license accept && sudo xcodebuild -runFirstLaunch)
 sudo xcodebuild -runFirstLaunch
 
 # apply the lates macOS update!
@@ -24,6 +37,30 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # install all tools, software, fonts and mac app store apps
 sh brew.sh
+
+sh cask.sh
+```
+
+## Install dotfiles
+
+```sh
+...
+```
+
+## Import previous configs etc
+
+1. iMessage Database
+2. fish history
+3. rupa z history
+4. TimeMachine Exclude list
+
+
+### less important imports
+1. Import lolcommits history
+
+```sh
+# create local mackup config and tell it to use iCloud
+echo "[storage]\nengine = icloud" > ~/.mackup.cfg
 ```
 
 ## Update Mac
