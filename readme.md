@@ -67,8 +67,9 @@ Since `macos.sh` cannot catch everything...
 
 
 ### less important imports
-1. Import lolcommits history
-2. ```
+
+* Import lolcommits history
+```
 # install OctoTree for Safari
 mkdir -p ~/code/clones
 git clone https://github.com/ovity/octotree ~/code/clones/octotree
