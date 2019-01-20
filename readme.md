@@ -20,6 +20,14 @@ The command line tools, homebrew and fish shell will be installed.
 curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/master/install | sh
 ```
 
+## Homebrew
+
+Install all software, casks, fonts and mac app store apps.
+
+```sh
+sh brew.sh > brew.log
+```
+
 ## Install dotfiles
 
 ```sh
@@ -27,13 +35,7 @@ sh dotfiles.sh
 ```
 
 
-### Homebrew
-
-```sh
-sh brew.sh > brew.log
-```
-
-### MacOS defauls
+## MacOS defauls
 
 Compare with it's original and review the settings in there.
 
