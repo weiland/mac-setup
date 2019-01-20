@@ -18,6 +18,8 @@ Homebrew
 sh brew.sh > brew.log
 ```
 
+# Login to iCloud, Accounts and 1Passwrod
+
 ```sh
 # run script
 curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/master/install | bash
@@ -57,6 +59,12 @@ sh cask.sh
 
 ### less important imports
 1. Import lolcommits history
+
+
+## Set Ups and Checks
+
+1. Open Mail.app and check accounts and settings
+2. Open Tweetbot.app and check accounts and settings
 
 ```sh
 # create local mackup config and tell it to use iCloud

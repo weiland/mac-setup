@@ -74,9 +74,12 @@ brew cask install 'qlmarkdown'
 brew cask install 'quicklook-json'
 brew cask install 'quicklook-csv'
 brew cask install 'qlprettypatch'
-brew cask install 'qlimagesize'
-brew cask install 'betterzipql'
+#brew cask install 'qlimagesize' # not available as cask any more :(
+brew cask install 'betterzip' # formerly just betterzipql, now the entire tool
 brew cask install 'webpquicklook'
+brew cask install quicklookase
+brew cask install qlvideo
+brew cask install suspicious-package
 
 # Useful tools
 brew install testssl
@@ -84,7 +87,6 @@ brew install wifi-password
 
 # Web
 brew install nginx
-brew install chromedriver
 brew install geckodriver
 brew install ios-webkit-debug-proxy
 
@@ -141,15 +143,18 @@ brew install zopfli
 brew cask install jumpcut
 brew cask install ShiftIt
 brew cask install iterm2
+brew cask install 1password
+brew cask install 1password-cli
 #brew cask install flux
 brew cask install ccleaner
 #brew cask install telegram
-brew cask install torbrowser
-brew cask install firefoxnightly
+brew cask install tor-browser
+brew cask install firefox-nightly
 brew cask install firefox
 brew cask install google-chrome-canary
 brew cask install google-chrome
-brew cask install webkit-nightly
+#brew cask install webkit-nightly # does not exist any longer
+brew cask install chromedriver
 brew cask install imageoptim
 brew cask install osxfuse
 brew cask install handbrake
@@ -160,7 +165,7 @@ brew cask install virtualbox
 brew cask install docker
 #brew cask install kitmatic
 brew cask install vagrant
-brew cask install gpgtools
+brew cask install gpg-suite
 brew cask install keyboard-cleaner
 brew cask install tripmode
 brew cask install spotify
@@ -179,7 +184,6 @@ brew cask install 'font-hack-nerd-font'
 brew cask install 'font-bebas-neue'
 brew cask install 'font-cabin'
 brew cask install 'font-clear-sans'
-brew cask install 'font-droid-sans'
 brew cask install 'font-hack'
 brew cask install 'font-hasklig'
 brew cask install 'font-lato'
@@ -227,4 +231,4 @@ qlmanage -r cache
 
 # fin
 brew cleanup
-brew cask cleanup # still required? I don't think so
+#brew cask cleanup # still required? I don't think so
