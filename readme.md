@@ -47,11 +47,59 @@ sh macos.sh
 
 Since `macos.sh` cannot catch everything...
 
+```sh
+# Touchbar (create default behaviour)
+defaults write com.apple.controlstrip FullCustomized -array com.apple.system.group.brightness com.apple.system.mission-control com.apple.system.launchpad com.apple.system.group.keyboard-brightness com.apple.system.group.media com.apple.system.group.volume com.apple.system.sleep
+# Mini Touchbar is MiniCustomized (not used)
+
+# Disable TouchBar by default and show F-keys on fn press
+defaults write com.apple.touchbar.agent PresentationModeGlobal -string "fullControlStrip"
+defaults write com.apple.touchbar.agent PresentationModeFnModes -dict-add fullControlStrip functionKeys
+
+# Safari
+defaults write apple.comSafari ShowFullURLInSmartSearchField -int 1
+defaults write com.apple.Safari SearchProviderIdentifier "com.duckduckgo"
+
+# SystemUIServer: Add Audio and Bluetooth
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 1
+defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Volume.menu"
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 1
+defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+
+# Adjust Notification Center
+defaults read com.apple.notificationcenterui
+
+# Set the right resolution (Default 1440x877 on MBP 13")
+defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame SystemPreferencesApp 8.0" -string "105 339 668 462 0 0 1440 877 "
+```
+
 * open Jumcut.app and ShiftIt.app and allow access
 1. Disable TouchBar as default
 2. Remove Siri from TouchBar (replace with lock computer)
 3. Map fn to show F keys
 4. Re-map Capslock
+5. Get rid of Guest-user
+
+
+## 1Password
+
+* Login and import my Vault
+
+## Alfred
+
+* Install own presets
+
+
+## BetterTouchTool
+
+* import config
+
+
+## Fantastical
+
+* Allow all access
+* Login to iCloud with App password
+* Disable Calendar Notifications
 
 ## Finder
 
@@ -65,9 +113,34 @@ Since `macos.sh` cannot catch everything...
 * Open Safari and login to GitHub
 
 
+## Mail
+
+* login to private and work accounts
+
+## Things 3
+* Login
+
+## Telegram
+
+* Login
+
+## Tweetbot
+
+* login to all accounts
+
+## TimeMachine
+
+* Enable encrypted backups
+* Add excluded items
+
+## FileVault
+
+* Enable FileVault fulldisc encryption
+
+
 ## Import previous configs etc
 
-1. iMessage Database
+1. iMessage Database (should be obsolete due to iCloud Sync)
 2. fish history
 3. rupa z history
 4. TimeMachine Exclude list
@@ -88,6 +161,12 @@ npm install natives@1.1.6
 # Add the tmp/safari build to the Safari Extension Builder
 ```
 
+## Import files from mounted volumes (e.g. old TM Backups etc)
+
+```sh
+rsync -av '/Volumes/Backup/data' ~/whereever
+```
+
 
 ## Set Ups and Checks
 
@@ -104,3 +183,10 @@ echo "[storage]\nengine = icloud" > ~/.mackup.cfg
 ```sh
 sh update.sh
 ```
+
+## Coming from an installed mac => new installtion
+
+* Make sure TimeMachine backup worked properly
+* Restart and press `Commmand + Shift + R`
+* Use Recovery Disk to download and install new Mac OS
+* On first boot: Hold `Command + Option + P + R` to clear NVRAM

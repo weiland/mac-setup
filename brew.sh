@@ -143,8 +143,10 @@ brew install zopfli
 brew cask install jumpcut
 brew cask install ShiftIt
 brew cask install iterm2
-brew cask install 1password
-brew cask install 1password-cli
+brew cask install 1password6
+brew cask install karabiner-elements
+#brew cask install 1password
+#brew cask install 1password-cli
 #brew cask install flux
 brew cask install ccleaner
 #brew cask install telegram
@@ -196,22 +198,24 @@ brew cask install 'font-roboto'
 
 # App Store Software
 mas install 975937182 # Fantastical 2
+mas install 904280696 # Things 3
 mas install 775737590 # iA Writer
 mas install 880001334 # Reeder
 mas install 568494494 # Pocket
-mas install 557168941 # Tweetbot
+mas install 1384080005 # Tweetbot3
 mas install 803453959 # Slack
 mas install 409201541 # Pages
 mas install 409183694 # Keynote
 mas install 409203825 # Numbers
 mas install 946399090 # Telegram Desktop
-mas install 1024069033 # Veertu
 #mas install 814499284 # Dropshare
 mas install 1094255754 # Outbank
 mas install 1176895641 # Spark
 #mas install 928871589 # Noizio
 mas install 715768417 # Microsoft Remote Desktop
 mas install 1013897218 # Already installed as cask
+mas install 402989379 # iStudiez Pro
+mas install 1255924440 # Moodle App
 
 # use 1Password for sudo
 brew tap 'ravenac95/sudolikeaboss'

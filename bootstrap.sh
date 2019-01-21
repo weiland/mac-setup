@@ -49,6 +49,9 @@ else
     echo "Homebrew is already installed."
 fi
 
+# Turn Homebrew Analytics off
+brew analytics off
+
 # Prepare Homebrew
 
 BREW_PREFIX=$(brew --prefix)
