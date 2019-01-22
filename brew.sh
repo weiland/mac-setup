@@ -138,12 +138,15 @@ brew install zopfli
 #brew 'scala'
 #brew 'sbt'
 #brew cask install java
+brew cask install eclipse-ide
+brew cask install racket # racket and DrRacket
 
 # Casks
 brew cask install jumpcut
 brew cask install ShiftIt
 brew cask install iterm2
 brew cask install 1password6
+brew cask install bettertouchtool
 brew cask install karabiner-elements
 #brew cask install 1password
 #brew cask install 1password-cli
