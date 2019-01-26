@@ -140,6 +140,7 @@ brew install zopfli
 #brew cask install java
 brew cask install eclipse-ide
 brew cask install racket # racket and DrRacket
+brew install sphinx-doc
 
 # Casks
 brew cask install jumpcut
