@@ -180,6 +180,8 @@ brew cask install ngrok
 brew cask install postgres
 brew cask install visual-studio-code
 brew cask install intellij-idea
+brew cask install phpstorm
+brew install openconnect # used for PulseSecure and Cisco
 
 # Install fonts
 brew tap 'caskroom/fonts'
