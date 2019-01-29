@@ -137,8 +137,10 @@ brew install zopfli
 #brew cask install java8
 brew cask install eclipse-ide
 brew cask install racket # racket and DrRacket
-brew install icarus-verilog
 brew install sphinx-doc
+brew install icarus-verilog
+brew install yosys graphviz
+brew cask install gtkwave
 
 # Java and Scala
 #brew cask install java
