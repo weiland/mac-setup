@@ -85,6 +85,8 @@ brew cask install suspicious-package
 brew install testssl
 brew install wifi-password
 
+brew install shellcheck
+
 # Web
 brew install nginx
 brew install geckodriver
@@ -133,14 +135,17 @@ brew install zopfli
 # TU Darmstadt
 # use Java 8
 #brew cask install java8
+brew cask install eclipse-ide
+brew cask install racket # racket and DrRacket
+brew install icarus-verilog
+brew install sphinx-doc
+
+# Java and Scala
 #brew cask install java
 #brew 'maven'
 #brew 'scala'
 #brew 'sbt'
-#brew cask install java
-brew cask install eclipse-ide
-brew cask install racket # racket and DrRacket
-brew install sphinx-doc
+
 
 # Casks
 brew cask install jumpcut
