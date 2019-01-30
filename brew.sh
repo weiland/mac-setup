@@ -33,6 +33,7 @@ brew install cmake
 brew install node
 brew install go
 brew install lua
+#brew install luarocks
 brew install php
 brew install yarn
 
@@ -125,6 +126,9 @@ brew install xz
 brew install mitmproxy
 brew install siege
 brew install wireshark
+brew cask install wireshark
+brew cask install wireshark-chmodbpf
+
 brew install mtr
 
 brew install youtube-dl
@@ -140,10 +144,12 @@ brew cask install racket # racket and DrRacket
 brew install sphinx-doc
 brew install icarus-verilog
 brew install yosys graphviz
+brew cask install xquartz # required by gtkwave
 brew cask install gtkwave
 
 # Java and Scala
 #brew cask install java
+#brew install jenv
 #brew 'maven'
 #brew 'scala'
 #brew 'sbt'
@@ -169,12 +175,12 @@ brew cask install google-chrome
 #brew cask install webkit-nightly # does not exist any longer
 brew cask install chromedriver
 brew cask install imageoptim
-brew cask install osxfuse
+brew cask install osxfuse # enable kernel extension
 brew cask install handbrake
 brew cask install sequel-pro
 brew cask install cyberduck
 brew cask install postman
-brew cask install virtualbox
+brew cask install virtualbox # enable kernel extension
 brew cask install docker
 #brew cask install kitmatic
 brew cask install vagrant
