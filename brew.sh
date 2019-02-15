@@ -67,6 +67,7 @@ brew install exa # improved ls in rust
 brew install bat # I prefer using npm hicat
 brew install fzf
 brew install httpie
+brew install websocat
 
 # Quicklook enhancements
 brew cask install 'qlcolorcode'
