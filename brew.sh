@@ -124,6 +124,7 @@ brew install ucspi-tcp # `tcpserver` etc.
 brew install xpdf
 brew install xz
 
+brew cask install burp-suite
 brew install mitmproxy
 brew install siege
 brew install wireshark
