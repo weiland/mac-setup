@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Use the "older" builtin ssh to add all SSH Keys (also using Keychain)
+/usr/bin/ssh-add -A
