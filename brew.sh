@@ -57,7 +57,7 @@ brew install gnupg2 # successor of the gpg package
 brew install tig
 brew install hub
 brew install jq
-brew install z
+brew install z # TODO: replace with fasd
 brew install entr
 
 # Improved utils written in other languages
@@ -158,7 +158,7 @@ brew cask install gtkwave
 
 
 # Casks
-brew cask install jumpcut
+brew cask install flycut # fomerly jumpcut
 brew cask install ShiftIt
 brew cask install iterm2
 brew cask install 1password6
