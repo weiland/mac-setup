@@ -168,6 +168,7 @@ brew cask install karabiner-elements
 #brew cask install 1password-cli
 #brew cask install flux
 brew cask install ccleaner
+brew cask install tipp10
 #brew cask install telegram
 brew cask install tor-browser
 brew cask install firefox-nightly
@@ -198,6 +199,8 @@ brew cask install visual-studio-code
 brew cask install intellij-idea
 brew cask install phpstorm
 brew install openconnect # used for PulseSecure and Cisco
+
+#brew cask install disk-drill # recover data
 
 # Install fonts
 brew tap 'caskroom/fonts'
