@@ -13,6 +13,8 @@ sudo xcodebuild -runFirstLaunch
 # apply the lates macOS update!
 sudo softwareupdate -ia --verbose
 
+tmutil localsnapshot
+
 # hello weclome new machine!
 if [ -d "$HOME/code" ]; then
   echo "There is already a ~/code directory"
