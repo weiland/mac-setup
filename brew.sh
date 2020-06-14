@@ -219,6 +219,7 @@ brew cask install 'font-montserrat'
 brew cask install 'font-mononoki'
 brew cask install 'font-open-sans'
 brew cask install 'font-roboto'
+brew cask install 'font-lexend-giga'
 
 # App Store Software
 mas install 975937182 # Fantastical 2
