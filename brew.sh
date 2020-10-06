@@ -62,6 +62,7 @@ brew install entr
 
 # Improved utils written in other languages
 brew install the_silver_searcher # previously ack
+brew install ripgrep
 brew install fd # easier find in rust
 brew install exa # improved ls in rust
 brew install bat # I prefer using npm hicat
@@ -199,12 +200,14 @@ brew cask install visual-studio-code
 brew cask install intellij-idea
 brew cask install phpstorm
 brew install openconnect # used for PulseSecure and Cisco
+brew cask install hex-fiend
 
 #brew cask install disk-drill # recover data
 
 # Install fonts
 brew tap 'caskroom/fonts'
 brew cask install 'font-source-code-pro'
+brew cask install 'font-dm-mono'
 brew cask install 'font-fira-code'
 brew cask install 'font-hack-nerd-font'
 brew cask install 'font-bebas-neue'
