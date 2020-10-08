@@ -25,6 +25,7 @@ brew install grep
 brew install git
 brew install tmux
 brew install ssh-copy-id
+brew install stow
 
 # languages
 brew install python
@@ -223,6 +224,8 @@ brew cask install 'font-mononoki'
 brew cask install 'font-open-sans'
 brew cask install 'font-roboto'
 brew cask install 'font-lexend-giga'
+brew cask install 'font-fira-code-nerd-font'
+brew cask install 'font-fira-mono-nerd-font'
 
 # App Store Software
 mas install 975937182 # Fantastical 2
