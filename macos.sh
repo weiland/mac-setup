@@ -19,14 +19,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set computer name (as done via System Preferences â Sharing)
-sudo scutil --set ComputerName $COMPUTERNAME
-sudo scutil --set HostName $COMPUTERNAME
-sudo scutil --set LocalHostName $COMPUTERNAME
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTERNAME
-
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# Set computer name (as done via System Preferences → Sharing)
+#sudo scutil --set ComputerName "$COMPUTERNAME"
+#sudo scutil --set HostName "$COMPUTERNAME"
+#sudo scutil --set LocalHostName "$COMPUTERNAME"
+#sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTERNAME"
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -35,7 +32,7 @@ sudo nvram SystemAudioVolume=" "
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Set highlight color to green
-defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
+defaults write NSGlobalDomain AppleHighlightColor -string "0.211700 0.976500 0.784300"
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
@@ -252,8 +249,8 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: allow quitting via â + Q; doing so will also hide desktop icons
-#defaults write com.apple.finder QuitMenuItem -bool true
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
