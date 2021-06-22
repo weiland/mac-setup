@@ -6,8 +6,9 @@
 
 Starting with a brand new macOS:
 
-1. Make sure to be connected to a wifi network
-2. Login to iCloud
+1. Make sure to be connected to a wifi network (or LAN)
+2. Configure TouchID when setting up
+2. Login to iCloud (but may skip photos)
 
 
 ### Bootstrap a new machine
@@ -15,22 +16,22 @@ Starting with a brand new macOS:
 This will do the very first steps for a new machine. The sudo password will be required.
 The command line tools, homebrew and fish shell will be installed.
 
-```sh
+```console
 # run installer
-curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/master/install | sh
+curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/main/install | sh
 ```
 
 ## Homebrew
 
 Install all software, casks, fonts and mac app store apps.
 
-```sh
+```console
 sh brew.sh > brew.log
 ```
 
 ## Install dotfiles
 
-```sh
+```console
 sh dotfiles.sh
 ```
 
@@ -38,8 +39,9 @@ sh dotfiles.sh
 ## MacOS defauls
 
 Compare with it's original and review the settings in there.
+[History of `.macos`](https://github.com/mathiasbynens/dotfiles/commits/main/.macos) (last checked/updated 22. June 2021)
 
-```sh
+```console
 sh macos.sh
 ```
 
@@ -47,7 +49,7 @@ sh macos.sh
 
 Since `macos.sh` cannot catch everything...
 
-```sh
+```console
 # Touchbar (create default behaviour)
 defaults write com.apple.controlstrip FullCustomized -array com.apple.system.group.brightness com.apple.system.mission-control com.apple.system.launchpad com.apple.system.group.keyboard-brightness com.apple.system.group.media com.apple.system.group.volume com.apple.system.sleep
 # Mini Touchbar is MiniCustomized (not used)
@@ -73,26 +75,78 @@ defaults read com.apple.notificationcenterui
 defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame SystemPreferencesApp 8.0" -string "105 339 668 462 0 0 1440 877 "
 ```
 
-* open Jumcut.app and ShiftIt.app and allow access
+### karabiner (umlauts)
+
+- enable umlauts via karabiner elements
+
+### iTerm2
+
+- import config file
+- make alt key working
+
+### neovim
+
+```console
+mkdir ~/.local/share/nvim/plugged
+
+curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+nvim +PlugInstall +qa
+
+# spell checking
+mkdir -p ~/.local/share/nvim/site/spell
+```
+
+### JumpCut
+
+```console
+defaults write net.sf.Jumpcut launchOnStartup -bool true
+defaults write net.sf.Jumpcut launchOnLogin -bool true
+# does not work yet (set cmd+B as hotkey)
+defaults write net.sf.Jumpcut mainHotkey -dict characters b charactersIgnoringModifiers b keyCode 11 modifierFlags 1048576
+```
+
+### ShiftIt
+
+```console
+defaults write org.shiftitapp.ShiftIt shiftItshowMenu -bool false
+```
+
+### Volta (nodejs, npm and git-open)
+
+```console
+mkdir ~/.local/share/volta
+```
+
+Export volta's new home globally and
+append volta's bin to global fish user path in `config.fish`:
+
+```console
+set -gx VOLTA_HOME ~/.local/share/volta
+fish_add_path -ga $VOLTA_HOME/bin
+```
+
+```console
+brew install volta
+```
+
+## Other stuff
+
 1. Disable TouchBar as default
-2. Remove Siri from TouchBar (replace with lock computer)
+2. Remove Siri from TouchBar (replace with Do-Not-Disturb)
 3. Map fn to show F keys
-4. Re-map Capslock
-5. Get rid of Guest-user
+4. (Re-map Capslock) Map paragraph/plus-minus to ESC
 
 
 ## 1Password
 
 * Login and import my Vault
 
-## Alfred
 
-* Install own presets
+## BetterTouchTool / Karabiner
 
-
-## BetterTouchTool
-
-* import config
+* import config (mostly for umlauts and mapping ESC)
 
 
 ## Fantastical
@@ -100,6 +154,7 @@ defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame Sys
 * Allow all access
 * Login to iCloud with App password
 * Disable Calendar Notifications
+* Add Exchange accounts with public folders
 
 ## Finder
 
@@ -110,14 +165,14 @@ defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame Sys
 
 ## Safari
 
-* Open Safari and login to GitHub
-
+* Open Safari and login to GitHub and Instapaper
 
 ## Mail
 
 * login to private and work accounts
 
 ## Things 3
+
 * Login
 
 ## Telegram
@@ -133,33 +188,12 @@ defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame Sys
 * Enable encrypted backups
 * Add excluded items
 
-## FileVault
-
-* Enable FileVault fulldisc encryption
-
 
 ## Import previous configs etc
 
-1. iMessage Database (should be obsolete due to iCloud Sync)
 2. fish history
-3. rupa z history
+3. rupa-z/zoxide history (if nothing big has been changed)
 4. TimeMachine Exclude list
-5. Re-config the Capslocks key to ESC
-
-
-### less important imports
-
-* Import lolcommits history
-```sh
-# install OctoTree for Safari
-mkdir -p ~/code/clones
-git clone https://github.com/ovity/octotree ~/code/clones/octotree
-cd ~/code/clones/octotree
-npm i && npm run build
-# on error: probably run:
-npm install natives@1.1.6
-# Add the tmp/safari build to the Safari Extension Builder
-```
 
 ## Import files from mounted volumes (e.g. old TM Backups etc)
 
@@ -167,18 +201,7 @@ npm install natives@1.1.6
 rsync -av '/Volumes/Backup/data' ~/whereever
 ```
 
-
-## Set Ups and Checks
-
-1. Open Mail.app and check accounts and settings
-2. Open Tweetbot.app and check accounts and settings
-
-```sh
-# create local mackup config and tell it to use iCloud
-echo "[storage]\nengine = icloud" > ~/.mackup.cfg
-```
-
-## Update Mac
+## Kepp the Mac up to date
 
 ```sh
 sh update.sh
@@ -186,7 +209,7 @@ sh update.sh
 
 ## Coming from an installed mac => new installtion
 
-* Make sure TimeMachine backup worked properly
+* Make sure TimeMachine backup did work properly
 * Restart and press `Commmand + Shift + R`
 * Use Recovery Disk to download and install new Mac OS
 * On first boot: Hold `Command + Option + P + R` to clear NVRAM
