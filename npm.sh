@@ -19,12 +19,8 @@ npmi() {
   fi
 }
 
-npmi 'hicat'
 npmi 'git-open'
 npmi 'git-recent'
-npmi 'diff-so-fancy'
 npmi 'serve'
-npmi 'tldr'
 npmi 'spoof'
 npmi 'npmignore'
-npmi 'fast-cli'

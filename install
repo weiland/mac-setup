@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-curl -fsS 'https://raw.githubusercontent.com/weiland/mac-setup/master/bootstrap.sh' | sh
+curl -fsS 'https://raw.githubusercontent.com/weiland/mac-setup/main/00_bootstrap.sh' | sh
 
