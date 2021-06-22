@@ -50,33 +50,13 @@ sh macos.sh
 Since `macos.sh` cannot catch everything...
 
 ```console
-# Touchbar (create default behaviour)
-defaults write com.apple.controlstrip FullCustomized -array com.apple.system.group.brightness com.apple.system.mission-control com.apple.system.launchpad com.apple.system.group.keyboard-brightness com.apple.system.group.media com.apple.system.group.volume com.apple.system.sleep
-# Mini Touchbar is MiniCustomized (not used)
-
-# Disable TouchBar by default and show F-keys on fn press
-defaults write com.apple.touchbar.agent PresentationModeGlobal -string "fullControlStrip"
-defaults write com.apple.touchbar.agent PresentationModeFnModes -dict-add fullControlStrip functionKeys
-
-# Safari
-defaults write apple.comSafari ShowFullURLInSmartSearchField -int 1
-defaults write com.apple.Safari SearchProviderIdentifier "com.duckduckgo"
-
-# SystemUIServer: Add Audio and Bluetooth
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 1
-defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Volume.menu"
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 1
-defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
-
 # Adjust Notification Center
 #defaults read com.apple.notificationcenterui
 
 # Set the right resolution (Default 1440x877 on MBP 13")
 defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame SystemPreferencesApp 8.0" -string "105 339 668 462 0 0 1440 877 "
-
-# ThreeFinger Drag
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+# and for the display
+defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame SystemPreferencesApp 8.0" -string "256 121 668 658 0 0 2560 1415"
 
 ```
 
