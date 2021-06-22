@@ -34,12 +34,15 @@ fi
 # clone the mac-setup directory
 git clone https://github.com/weiland/mac-setup "$CODE_DIR/mac-setup"
 
+# clone the dotfiles
+git clone https://github.com/weiland/dotfiles "$CODE_DIR/dotfiles"
+
 # cd into mac-setup
 cd "$CODE_DIR/mac-setup"
 
 # install homebrew if not yet existing
 if ! command -v brew >/dev/null; then
-  echo "Homebrew is will be installed:"
+  echo "Homebrew will be installed:"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo "Homebrew is already installed."
@@ -63,8 +66,15 @@ if ! fgrep -q "${BREW_PREFIX}/bin/fish" /etc/shells; then
   chsh -s "${BREW_PREFIX}/bin/fish";
 fi;
 
-# Mac App Store cli
+# Most important brews
 brew install mas
+brew install git
+brew install starship
+brew install --cask iterm2
 
+if ! command -v stow >/dev/null; then
+  echo "stow will be installed:"
+  brew install stow
+fi
 
 echo "You are done! 🎈 Now you can continue to sh brew.sh"
