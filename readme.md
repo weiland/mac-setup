@@ -69,10 +69,15 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
 
 # Adjust Notification Center
-defaults read com.apple.notificationcenterui
+#defaults read com.apple.notificationcenterui
 
 # Set the right resolution (Default 1440x877 on MBP 13")
 defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame SystemPreferencesApp 8.0" -string "105 339 668 462 0 0 1440 877 "
+
+# ThreeFinger Drag
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
 ```
 
 ### karabiner (umlauts)
@@ -89,13 +94,14 @@ defaults write com.apple.systempreferences "NSWindow Frame Main Window Frame Sys
 ```console
 mkdir ~/.local/share/nvim/plugged
 
-curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 nvim +PlugInstall +qa
 
 # spell checking
 mkdir -p ~/.local/share/nvim/site/spell
+mkdir -p ~/.local/share/nvim/undo
 ```
 
 ### JumpCut
