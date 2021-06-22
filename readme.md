@@ -8,7 +8,8 @@ Starting with a brand new macOS:
 
 1. Make sure to be connected to a wifi network (or LAN)
 2. Configure TouchID when setting up
-2. Login to iCloud (but may skip photos)
+3. Login to iCloud (but may skip photos)
+4. Open _Terminal.app_
 
 
 ### Bootstrap a new machine
@@ -17,7 +18,6 @@ This will do the very first steps for a new machine. The sudo password will be r
 The command line tools, homebrew and fish shell will be installed.
 
 ```console
-# run installer
 curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/main/install | sh
 ```
 
@@ -26,7 +26,11 @@ curl -sSL https://raw.githubusercontent.com/weiland/mac-setup/main/install | sh
 Install all software, casks, fonts and mac app store apps.
 
 ```console
-sh brew.sh > brew.log
+# checkout Brewfile
+vim Brewfile
+
+# brewing
+brew bundle
 ```
 
 ## Install dotfiles
@@ -34,7 +38,6 @@ sh brew.sh > brew.log
 ```console
 sh dotfiles.sh
 ```
-
 
 ## MacOS defauls
 

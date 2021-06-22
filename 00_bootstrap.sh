@@ -33,11 +33,13 @@ fi
 
 # clone the mac-setup directory
 git clone https://github.com/weiland/mac-setup "$CODE_DIR/mac-setup"
+
+# cd into mac-setup
 cd "$CODE_DIR/mac-setup"
 
 # install homebrew if not yet existing
 if ! command -v brew >/dev/null; then
-  echo "Homebrew is not yet installed"
+  echo "Homebrew is will be installed:"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo "Homebrew is already installed."
@@ -51,7 +53,6 @@ brew analytics off
 BREW_PREFIX=$(brew --prefix)
 
 #brew tap Homebrew/bundle
-
 
 # Install fish shell
 brew install fish
