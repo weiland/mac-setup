@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+if ! command -v volta >/dev/null; then
+  echo "Info: There is no volta"
+fi
+
 if ! command -v node >/dev/null; then
   echo "NodeJS is not installed"
   exit 1
