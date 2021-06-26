@@ -19,6 +19,7 @@ brew "mas"
 brew "neovim"
 brew "openconnect"
 brew "ripgrep"
+brew "shellcheck"
 brew "starship"
 brew "stow"
 brew "tealdeer"
@@ -38,6 +39,7 @@ cask "karabiner-elements"
 cask "shiftit"
 cask "sublime-text"
 cask "vimr"
+cask "visual-studio-code"
 mas "1Password", id: 443987910
 mas "Fantastical", id: 975937182
 mas "Microsoft OneNote", id: 784801555
