@@ -77,6 +77,7 @@ cask "gpg-suite-no-mail"
 cask "iterm2"
 cask "jumpcut"
 cask "karabiner-elements"
+cask "mark-text"
 cask "microsoft-edge"
 cask "microsoft-teams"
 cask "miniforge"
@@ -86,6 +87,7 @@ cask "qlimagesize"
 cask "qlmarkdown"
 cask "qlstephen"
 cask "quicklook-json"
+cask "racket"
 cask "sequel-ace"
 cask "shiftit"
 cask "spark-ar-studio"
@@ -93,15 +95,21 @@ cask "spotify"
 cask "sublime-text"
 cask "tor-browser"
 cask "tripmode"
+cask "tunnelbear"
 cask "vimr"
 cask "visual-studio-code"
 cask "zettlr"
 mas "1Password", id: 443987910
 mas "Bear", id: 1091189122
+mas "Darkroom", id: 953286746
 mas "Fantastical", id: 975937182
+mas "ICE Buddy", id: 1595947689
 mas "Microsoft Outlook", id: 985367838
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Pixelmator", id: 407963104
+mas "Pixelmator Pro", id: 1289583905
+mas "Reeder", id: 1529448980
 mas "StuffIt Expander", id: 919269455
 mas "Things", id: 904280696
 mas "Tweetbot", id: 1384080005
