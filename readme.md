@@ -33,6 +33,18 @@ vim Brewfile
 brew bundle
 ```
 
+## Install nix
+
+for macOS as multi-user
+
+```sh
+sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume --daemon
+```
+
+```fish
+sh ( curl -L https://nixos.org/nix/install | psub ) --darwin-use-unencrypted-nix-store-volume --daemon
+```
+
 ## Install dotfiles
 
 ```console
