@@ -114,3 +114,4 @@ mas "StuffIt Expander", id: 919269455
 mas "Things", id: 904280696
 mas "Tweetbot", id: 1384080005
 mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
