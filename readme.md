@@ -41,9 +41,23 @@ for macOS as multi-user
 sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume --daemon
 ```
 
+or with fish:
+
 ```fish
 sh ( curl -L https://nixos.org/nix/install | psub ) --darwin-use-unencrypted-nix-store-volume --daemon
 ```
+
+### Install nix-darwin
+
+```sh
+nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
+
+mv /etc/nix/nix.conf /etc/nix/nix.conf.before-nix-darwin
+
+./result/bin/darwin-installer
+```
+
+### Install home-manager within nix-darwin
 
 ## Install dotfiles
 
