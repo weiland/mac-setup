@@ -59,6 +59,17 @@ mv /etc/nix/nix.conf /etc/nix/nix.conf.before-nix-darwin
 
 ### Install home-manager within nix-darwin
 
+```sh
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+```
+
+Add home-manager to _~/.nixpkgs/darwin-configuration.nix_
+
+```nix
+imports = [ <home-manager/nix-darwin> ];
+```
+
 ## Install dotfiles
 
 ```console
