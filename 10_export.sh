@@ -5,15 +5,18 @@ brew cask list           > cask-list.txt
 npm list -g --depth=0    > npm-g-list.txt
 yarn global ls --depth=0 > yarn-g-list.txt
 
-brew dump
+list volta (if used)
+
+
+brew bundle dump
 
 # BackUp
 
-* SSH Keys
 * GPG Keys
 * crontab
-* iMessages
-* iterm2 prefs
+* fish_history
+* .config
+* .local
 
 # TODO: Add gems, pip, go and consider backing up configs manually
 

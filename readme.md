@@ -8,7 +8,7 @@ Starting with a brand new macOS:
 
 1. Make sure to be connected to a wifi network (or LAN)
 2. Configure TouchID when setting up
-3. Login to iCloud (but may skip photos)
+3. Login to iCloud (but may skip photos) and activate Documents Sync
 4. Open _Terminal.app_
 
 
