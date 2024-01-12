@@ -47,6 +47,7 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d H:mm"
 # Set highlight color to Jade <3 ("0.764700 0.976500 0.568600" # standard green)
 defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 # previously "0.211700 0.976500 0.784300"
+# new (red) 215/255 51/255 119/255
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
