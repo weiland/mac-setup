@@ -1,6 +1,12 @@
 # Mac Setup
 
-> Eventually publishing mac-setup and dotfiles
+> [!IMPORTANT]
+> I used to setup/reinstall a mac with this repo/scripts.
+> In the recent years i moved over to _nix_ and _nix_darwin_ to manage my systems.  
+> The new repo for setting up a mac/computer is at https://github.com/weiland/nix-config
+
+
+---
 
 ## New Mac
 
